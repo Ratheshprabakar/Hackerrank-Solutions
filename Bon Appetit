@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int m,n,i,x;
+    int sum=0;
+    int a[100000];
+    int charged,actual;
+    scanf("%d %d",&m,&n);
+    for(i=0;i<m;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    scanf("%d",&charged);
+    for(i=0;i<m;i++)
+    {
+        if(i!=n)
+        {
+            sum=sum+a[i];
+        }
+    }
+    x=sum/2;
+    if(x==charged)
+    {
+        printf("Bon Appetit");
+    }
+    else if(charged>x)
+    {
+        printf("%d",charged-x);
+    }
+}
+

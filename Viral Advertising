@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int n,x=5,i,likes,sum=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        likes=x/2;
+        sum=sum+likes;
+        likes=likes *3;
+        x=likes;
+    }
+    printf("%d",sum);
+
+}

@@ -1,0 +1,19 @@
+
+def pdf(h, word):
+    a=[]
+    x=len(word)
+    for i in word:
+        y=ord(i)-97
+        a.append(h[y])
+    return x*max(a)
+def main():
+    h = list(map(int, input().rstrip().split()))
+    word = input()
+    result = pdf(h, word)
+    print(result)
+    
+if __name__ == '__main__':
+    main()
+
+
+

@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int x;
+    char* word[9]={"one","two","three","four","five","six","seven","eight","nine"};
+    scanf("%d",&x);
+    if(x>=1 && x<=9)
+    {
+        printf("%s",word[x-1]);
+    }
+    else  
+    {
+        printf("Greater than 9");
+    }
+   
+}

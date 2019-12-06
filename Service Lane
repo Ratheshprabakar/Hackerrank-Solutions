@@ -1,0 +1,19 @@
+def main():
+    list1=[]
+    number=[int(x) for x in input().split()]
+    n=number[0]
+    t=number[1]
+    list1=[int(x) for x in input().split()]
+    element=0
+    while(element<t):
+        test=[int(x) for x in input().split()]
+        i=test[0]
+        j=test[1]
+        temp=[]
+        for i in range(i,j+1):
+            temp.append(list1[i])
+        value=min(temp)
+        print(value)
+        element = element + 1
+if __name__=='__main__':
+    main()

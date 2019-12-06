@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    long long  signed int a[10],i,sum=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        //printf("%lld",i);
+        scanf("%lld",&a[i]);
+       // printf("%lld",a[i]);
+        sum+=a[i];
+    }
+    printf("%lld",sum);
+    return 0;
+}

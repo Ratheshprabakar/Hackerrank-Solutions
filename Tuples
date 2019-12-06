@@ -1,0 +1,7 @@
+def main():
+    n = int(input())
+    integer_list =[int(x) for x in input().split()]
+    tuple_value = tuple(integer_list)
+    print(hash(tuple_value))
+if __name__ == '__main__':
+   main()

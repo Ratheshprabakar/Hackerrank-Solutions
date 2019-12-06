@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+   int n,a[1000],i;
+   float c=0.0,d=0.0,e=0.0;
+   scanf("%d",&n);
+   for(i=0;i<n;i++)
+   {
+       scanf("%d",&a[i]);
+       if(a[i]<0)
+       {
+          c++;
+       }
+       else if(a[i]>0)
+       {
+           d++;
+       }
+       else
+       {
+           e++;
+       }
+      
+   }
+     printf("%f\n%f\n%f",(d/n),(c/n),(e/n));
+     return 0;
+}

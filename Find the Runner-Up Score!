@@ -1,0 +1,14 @@
+def main():
+    n = int(input())
+    scores = [int(x) for x in input().split()]
+    scores.sort(reverse= True)
+    x=max(scores)
+    y=scores.count(x)
+    if y==1:
+        print(scores[1])
+    else:
+        print(scores[y])
+
+if __name__ == '__main__':
+   main()
+

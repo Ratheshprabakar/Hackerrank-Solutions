@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+    long int n,i,max=0,x;
+    int a[200000],b[200000]={0};
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        b[a[i]]++;
+    }
+        for(i=0;i<n;i++)
+    {
+        if(max<b[a[i]])
+        {
+            max=b[a[i]];
+            x=a[i];
+        }
+        else if(max==b[a[i]])
+        {
+            if(a[i]<x)
+            {
+                x=a[i];
+            }
+        }
+        //printf("%d\t",a[i]);
+    }
+    printf("%d",x);
+
+}

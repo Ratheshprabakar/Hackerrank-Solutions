@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main() {
+  long int s, t;
+  long int a, b;
+  long int m, n;
+  long int i, j;
+  int count1 = 0;
+  int count2 = 0;
+  long int apple[100000], orange[100000];
+  scanf("%ld %ld", &s, &t);
+  scanf("%ld %ld", &a, &b);
+  scanf("%ld %ld", &m, &n);
+  for (i = 0; i < m; i++) {
+    scanf("%ld", &apple[i]);
+  }
+  for (i = 0; i < n; i++) {
+    scanf("%ld", &orange[i]);
+  }
+  for (i = 0; i < m; i++) {
+    apple[i] += a;
+  }
+  for (i = 0; i < n; i++) {
+    orange[i] += b;
+  }
+  for (i = 0; i < m; i++) {
+    if ((apple[i] >= s) && (apple[i] <= t)) {
+      count1++;
+    }
+  }
+  for (i = 0; i < n; i++) {
+    if ((orange[i] >= s) && (orange[i] <= t)) {
+      count2++;
+    }
+  }
+  printf("%d\n", count1);
+  printf("%d", count2);
+}

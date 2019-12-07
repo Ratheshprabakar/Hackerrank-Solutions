@@ -1,0 +1,15 @@
+def main():
+    n=int(input())
+    element= [int(x) for x in input().split()]
+    temp_list=[]
+    for i in range(1,n+1):
+        temp=element.index(i)
+        temp_list.append(temp+1)
+    index_list = []
+    for i in temp_list:
+        index_value=element.index(i)
+        index_list.append(index_value+1)
+    for i in index_list:
+        print(i)
+if __name__=='__main__':
+    main()

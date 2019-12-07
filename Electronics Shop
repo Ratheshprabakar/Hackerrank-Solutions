@@ -1,0 +1,21 @@
+def main():
+    values=[int(x) for x in input().split()]
+    amount=values[0]
+    keyboard_count=values[1]
+    usb_count=values[2]
+    keyboard_cost=[int(x) for x in input().split()]
+    usb_cost=[int(x) for x in input().split()]
+    temp_list=[]
+    if min(keyboard_cost)+min(usb_cost)>amount:
+        print("-1")
+    else:
+        for i in range(keyboard_count):
+            for j in range(usb_count):
+                cost=keyboard_cost[i]+usb_cost[j]
+                if cost<=amount:
+                    temp_list.append(cost)
+        maximum_value=max(temp_list)
+        print(maximum_value)                
+if __name__=='__main__':
+    main()
+    

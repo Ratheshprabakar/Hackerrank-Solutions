@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j,temp;
+    int element[70];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&element[i]);
+        if(element[i]>=39)
+        {
+            for(j=element[i];j<element[i]+5;j++)
+            {
+                if(j%5==0)
+                {
+                    temp=j-element[i];
+                    if(temp<3)
+                    {
+                        printf("%d\n",j);
+                    }
+                    else
+                    {
+                        printf("%d\n",element[i]);
+                    }
+                break;
+                }
+             }
+        }
+        else if (element[i]==38)
+        {
+            printf("40\n");
+        }
+        else
+        {
+            printf("%d\n",element[i]);
+        }
+    }
+}

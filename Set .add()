@@ -1,0 +1,10 @@
+def main():
+    n=int(input())
+    country=set()
+    for i in range(0,n):
+        temp=input()
+        if temp not in country:
+            country.add(temp)
+    print(len(country))
+if __name__=='__main__':
+    main()

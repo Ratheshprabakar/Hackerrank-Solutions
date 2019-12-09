@@ -1,0 +1,16 @@
+def main():
+    temp=[int(x) for x in input().split()]
+    temp_list=[int(j) for j in input().split()]
+    result_list=[]
+    if temp[1]!=temp[0]-1:
+        for i in range(temp[1],temp[0]):
+            result_list.append(temp_list[i])
+        for i in range(0,temp[1]):
+            result_list.append(temp_list[i])
+    else:
+        result_list.append(temp_list[temp[1]])
+        for i in range(0,temp[1]):
+            result_list.append(temp_list[i])
+    print(*result_list, sep=' ')
+if __name__=='__main__':
+    main()

@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int n,k,i,j,and_value,or_value,xor_value;
+    int and_result=0,or_result=0,xor_result=0;
+    scanf("%d %d",&n,&k);
+    for(i=1;i<=n;i++)
+    {
+        for(j=i+1;j<=n;j++)
+        {
+            and_value=i&j;
+            or_value=i|j;
+            xor_value=i^j;
+            if(and_value<k && and_value >and_result)
+            {
+                and_result=and_value;
+            }
+            if(or_value<k && or_value>or_result)
+            {
+                or_result=or_value;
+            }
+            if(xor_value<k && xor_value>xor_result)
+            {
+                xor_result=xor_value;
+            }
+        }
+    }
+    printf("%d\n%d\n%d",and_result,or_result,xor_result);
+}

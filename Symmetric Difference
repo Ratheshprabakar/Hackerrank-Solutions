@@ -1,0 +1,11 @@
+def main():
+    no_of_set1=int(input())
+    set1=[int(x) for x in input().split()]
+    no_of_set2=int(input())
+    set2=[int(x) for x in input().split()]
+    result=set(set1).symmetric_difference(set(set2))
+    x=sorted(result)
+    for i in x:
+        print(i)
+if __name__=='__main__':
+    main()

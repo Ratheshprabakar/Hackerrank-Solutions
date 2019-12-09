@@ -1,0 +1,32 @@
+def main():
+    s=input()
+    time=[x for x in s.split(":")]
+    temp_list=[]
+    if time[0] == '12':
+            temp_list=list(time[2])
+            if 'A' in temp_list:
+                time[0]='00'
+                x=time[2].split('AM')
+                for i in range(0,2):
+                    print(time[i],end=':')
+                print(str(x[0]))
+            else:
+                time[0]='12'
+                x=time[2].split('PM')
+                for i in range(0,2):
+                    print(time[i],end=":")
+                print(str(x[0]))
+    else:
+        if 'PM' in time[2]:
+                time[0]=int(time[0])+12
+                x=time[2].split('PM')
+                for i in range(0,2):
+                    print(time[i],end=':')
+                print(str(x[0]))
+        else:
+            x=time[2].split('AM')
+            for i in range(0,2):
+                print(time[i],end=':')
+            print(str(x[0]))
+if __name__=='__main__':
+    main()

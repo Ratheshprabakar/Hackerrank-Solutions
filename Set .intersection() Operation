@@ -1,0 +1,10 @@
+
+def main():
+    no_of_english=int(input())
+    english_newspaper=[int(x) for x in input().split()]
+    no_of_french=int(input())
+    french_newspaper=[int(x) for x in input().split()]
+    result=set(english_newspaper).intersection(set(french_newspaper))
+    print(len(result))
+if __name__=='__main__':
+    main()

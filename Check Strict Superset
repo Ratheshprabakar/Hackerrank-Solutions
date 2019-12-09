@@ -1,0 +1,16 @@
+def main():
+    element_of_a=[int(x) for x in input().split()]
+    n=int(input())
+    temp_list=[]
+    for i in range(0,n):
+        element_of_set_i=[int(j) for j in input().split()]
+        if set(element_of_a).issuperset(set(element_of_set_i)):
+            temp_list.append(1)
+        else:
+            print("False")
+            break
+    if len(temp_list)==n:
+        print("True")
+if __name__=='__main__':
+    main()
+

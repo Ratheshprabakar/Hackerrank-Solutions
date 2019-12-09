@@ -1,0 +1,13 @@
+def main():
+    n=int(input())
+    for i in range(0,n):
+        no_of_a=int(input())
+        element_of_a=[int(x) for x in input().split()]
+        no_of_b=int(input())
+        element_of_b=[int(j) for j in input().split()]
+        if set(element_of_a).issubset(element_of_b):
+            print("True")
+        else:
+            print("False")
+if __name__=="__main__":
+    main()

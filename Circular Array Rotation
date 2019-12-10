@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int q,i,j=0;
+    int n,m,k;
+    int a[100000];
+    scanf("%d %d %d",&n,&k,&q);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d ",&a[i]);
+    }
+    while (q--) {
+    scanf("%d", &m);
+    printf("%d\n", a[(n + m - (k % n)) % n]);
+  }
+    
+}

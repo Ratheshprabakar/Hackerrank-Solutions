@@ -1,0 +1,24 @@
+def main():
+    n=int(input())
+    python_students=[]
+    for i in range(0,n):
+        name = input()
+        score = float(input())
+        x=[name,score]
+        python_students.append(list(x))
+    temp_grade=[]
+    for i in range(0,n):
+        temp_grade.append(python_students[i][1])
+    lowest_grade=min(temp_grade)
+    while (temp_grade.count(lowest_grade)): 
+        temp_grade.remove(lowest_grade)  
+    final_lowest_grade=min(temp_grade)
+    temp_names=[]
+    for i in range(0,n):
+        if python_students[i][1]==final_lowest_grade:
+            temp_names.append(python_students[i][0])
+    for i in sorted(temp_names):
+        print(i)
+if __name__=='__main__':
+    main()
+

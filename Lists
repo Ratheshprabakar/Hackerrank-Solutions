@@ -1,0 +1,25 @@
+def main():
+    n=int(input())
+    answer_list=[]
+    for i in range(0,n):
+        temp_list=[x for x in input().split()]
+        operation = temp_list[0]
+        if operation == 'insert':
+            answer_list.insert(int(temp_list[1]),int(temp_list[2]))
+        elif operation == 'print':
+            print(answer_list)
+        elif operation == 'remove':
+            answer_list.remove(int(temp_list[1]))
+        elif operation == 'append':
+            answer_list.append(int(temp_list[1]))
+        elif operation =='sort':
+            answer_list.sort()
+        elif operation =='pop':
+            answer_list.pop()
+        elif operation =='reverse':
+            answer_list.reverse()
+if __name__ =='__main__':
+    main()
+
+
+

@@ -1,0 +1,12 @@
+n = int(input())
+s = set(map(int, input().split()))
+m=int(input())
+for i in range(0,m):
+    operation_list=input().split()
+    if operation_list[0]=='remove':
+        s.remove(int(operation_list[1]))
+    elif operation_list[0]=='discard':
+        s.discard(int(operation_list[1]))
+    elif operation_list[0]=='pop':
+        s.pop()
+print(sum(s))

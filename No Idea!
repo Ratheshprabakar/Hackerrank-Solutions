@@ -1,0 +1,14 @@
+def main():
+    n, m = (int(i) for i in input().split())
+    array = map(int, input().strip().split(' '))
+    A = set(map(int, input().strip().split(' ')))
+    B = set(map(int, input().strip().split(' ')))
+    count=0
+    for i in array:
+        if i in A:
+            count+=1
+        if i in B:
+            count-=1
+    print(count)
+if __name__=='__main__':
+    main()

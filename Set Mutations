@@ -1,0 +1,18 @@
+def main():
+    l = int(input())
+    A = set(map(int, input().split()))
+    N = int(input())
+    for i in range(N):
+        (operation_name, B_length) = input().split()
+        B = set(map(int, input().split()))
+        if operation_name == 'intersection_update':
+            A.intersection_update(B)
+        elif operation_name == 'update':
+            A.update(B)
+        elif operation_name == 'symmetric_difference_update':
+            A.symmetric_difference_update(B)
+        elif operation_name == 'difference_update':
+            A.difference_update(B)
+    print (sum(A))
+if __name__=='__main__':
+    main()

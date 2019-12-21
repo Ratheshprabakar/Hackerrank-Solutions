@@ -1,0 +1,8 @@
+def main():
+    K = int(input())
+    room_list = list(map(int, input().split()))
+    room_set = set(room_list)
+    diff = sum(room_set)* K - sum(room_list)
+    print(diff // (K - 1))
+if __name__=='__main__':
+    main()

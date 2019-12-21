@@ -1,0 +1,62 @@
+def main():
+    s=input()
+    #result=[]
+    for i in s:
+        if i.isalnum():
+            count=1
+            break
+        else:
+            count=0
+    if count==1:
+        print("True")
+    else:
+        print("False")
+    count=0
+    for i in s:
+        if i.isalpha():
+            count=1
+            break
+        else:
+            count=0
+    if count==1:
+        print("True")
+    else:
+        print("False")
+    count=0
+    for i in s:
+        if i.isdigit():
+            count=1
+            break
+        else:
+            count=0
+    if count==1:
+        print("True")
+    else:
+        print("False")
+    count=0
+    for i in s:
+        if i.islower():
+            count=1
+            break
+        else:
+            count=0
+    if count==1:
+        print("True")
+    else:
+        print("False")
+    count=0
+    for i in s:
+        if i.isupper():
+            count=1
+            break
+        else:
+            count=0
+    if count==1:
+        print("True")
+    else:
+        print("False")
+    count=0
+if __name__ == '__main__':
+    main()
+
+

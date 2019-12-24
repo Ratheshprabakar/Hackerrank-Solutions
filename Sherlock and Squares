@@ -5,10 +5,7 @@ def main():
     for i in range(0,n):
         count=0
         (a, b)=[int(x) for x in input().split()]
-        squareroot_of_a,squareroot_of_b=math.sqrt(a),math.sqrt(b)
-        start_value=math.ceil(squareroot_of_a)
-        end_value=math.ceil(squareroot_of_b)
-        for i in range(start_value,end_value+1):
+        for i in range(math.ceil(math.sqrt(a)),math.ceil(math.sqrt(b))+1):
             if (i*i) >=a and (i*i)<= b:
                 count=count+1
         print(count)

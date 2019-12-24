@@ -5,15 +5,9 @@ def main():
     while socks !=[]:
         for i in socks:
             count_of_i=socks.count(i)
-            x=count_of_i//2
-            if count_of_i%2==0:
-                socks_count=socks_count + x
-                for j in range(0,count_of_i):
-                    socks.remove(i)
-            else:
-                socks_count=socks_count + x
-                for j in range(0,count_of_i):
-                    socks.remove(i)
+            socks_count=socks_count + (count_of_i//2)
+            for j in range(0,count_of_i):
+                socks.remove(i)
     print(socks_count)
 if __name__=="__main__":
     main()

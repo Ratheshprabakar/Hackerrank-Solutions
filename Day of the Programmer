@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int year;
+    int date;
+    scanf("%d",&year);
+    if(year==1918)
+    {
+        date=26;
+    }
+    else if ((year<1918 && year%4==0) || (year%4==0 && year %100!=0) || (year%400==0))
+    {
+        date=12;
+    }
+    else{
+        date=13;
+    }
+    printf("%d.09.%d",date,year);
+}

@@ -1,0 +1,15 @@
+def main():
+    n=int(input())
+    sticks_length=[int(x) for x in input().split()]
+    x=n
+    while(sticks_length!=[]):
+        length_of_cut=min(sticks_length)
+        x=len(sticks_length)
+        no_of_times=sticks_length.count(length_of_cut)
+        for i in range(0,no_of_times):
+            sticks_length.remove(length_of_cut)
+        print(x)
+        for i in sticks_length:
+            i=i-length_of_cut
+if __name__=='__main__':
+    main()

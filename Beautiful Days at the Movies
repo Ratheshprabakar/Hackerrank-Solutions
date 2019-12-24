@@ -1,0 +1,10 @@
+def main():
+    values=[int(x) for x in input().split()]
+    count=0
+    for i in range(values[0],values[1]+1):
+        reverse_value=str(i)[::-1]
+        if(abs(i-int(reverse_value))%values[2]==0):
+            count=count+1
+    print(count)
+if __name__=='__main__':
+    main()

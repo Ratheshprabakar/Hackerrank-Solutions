@@ -1,0 +1,21 @@
+def main():
+    (return_date,return_month,return_year)=[int(x) for x in input().split()]
+    (due_date,due_month,due_year)=[int(x) for x in input().split()]
+    if (return_year==due_year):
+        if(return_month==due_month):
+            if(return_date>due_date):
+                print(15*(return_date-due_date))
+            else:
+                print(0)
+        else:
+            if (return_month>due_month):
+                print(500*abs(return_month-due_month))
+            else: 
+                print(0)
+    else:
+        if (return_year>due_year):
+            print(10000)
+        else:
+            print(0)
+if __name__=='__main__':
+    main()

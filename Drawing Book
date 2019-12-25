@@ -1,0 +1,6 @@
+def  main():
+    no_of_pages=int(input())
+    page_to_be_visited=int(input())
+    print(min(page_to_be_visited//2, no_of_pages//2 - page_to_be_visited//2))
+if __name__=='__main__':
+    main()

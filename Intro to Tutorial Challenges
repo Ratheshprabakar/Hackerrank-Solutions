@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int v,n,i;
+    int element[1000];
+    scanf("%d\n%d",&v,&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&element[i]);
+        if(element[i]==v)
+        {
+            printf("%d",i);
+        }
+    }
+    return 0;
+}

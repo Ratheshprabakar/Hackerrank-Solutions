@@ -1,0 +1,10 @@
+import itertools
+def main():
+    inputs=[x for x in input().split()]
+    value=int(inputs[1])
+    x=list(itertools.combinations_with_replacement(sorted(inputs[0]),value))
+    y=tuple(x)
+    for i in y:
+        print(''.join(i))
+if __name__=='__main__':
+    main()

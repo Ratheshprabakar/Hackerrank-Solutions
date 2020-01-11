@@ -1,0 +1,9 @@
+import itertools
+def main():
+    a=[int(x) for x in input().split()]
+    b=[int(x) for x in input().split()]
+    c=[sorted(a),sorted(b)]
+    value=(list(itertools.product(*c)))
+    print(*value, sep=" ")
+if __name__=='__main__':
+    main()

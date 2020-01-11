@@ -1,0 +1,10 @@
+import itertools
+def main():
+    inputs=[x for x in input().split()]
+    sequence=int(inputs[1])
+    x=list(itertools.permutations(sorted(inputs[0]),sequence))
+    y=tuple(x)
+    for i in y:
+        print(''.join(i))
+if __name__=='__main__':
+    main()

@@ -1,0 +1,20 @@
+def main():
+    strings=[]
+    queries=[]
+    n=int(input())
+    for i in range(n):
+        temp=input()
+        strings.append(temp)
+    m=int(input())
+    for i in range(m):
+        temp=input()
+        queries.append(temp)
+    for i in queries:
+        if i in strings:
+            #print(i)
+            print(strings.count(i))
+        else:
+            print(0)
+if __name__=='__main__':
+    main()
+        

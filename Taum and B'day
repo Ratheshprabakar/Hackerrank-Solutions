@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    long int b,w,bc,wc,z,result=0;
+    int t,i;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        scanf("%ld %ld",&b,&w);
+        scanf("%ld %ld %ld",&bc,&wc,&z);
+        if((bc+z)>=wc && (wc+z)>=bc)
+        {
+            result=((b*bc)+(w*wc));
+        }
+        else if((bc>wc) && (wc+z)<bc)
+        {
+            result=((b*wc)+(w*wc)+(b*z));
+        }
+        else
+        {
+            result=((b*bc)+(w*bc)+(w*z));
+        }
+        printf("%ld\n",result);
+    }
+}

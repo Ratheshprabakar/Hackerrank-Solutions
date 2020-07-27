@@ -1,0 +1,18 @@
+int runningTime(int arr_count, int* arr) {
+int i,j,k;
+    int value,count=0;
+    for(i=1;i<arr_count;i++)
+    {
+        value=arr[i];
+        j=i-1;
+        while(j>=0 && value<arr[j])
+        {
+            arr[j+1]=arr[j];
+            j=j-1;
+            count++;
+        }
+        arr[j+1]=value;
+                
+    }
+    return count;
+}

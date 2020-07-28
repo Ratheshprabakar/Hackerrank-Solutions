@@ -1,0 +1,17 @@
+long repeatedString(char* s, long n) {
+int i;
+long rem,rept,cnt=0,extra=0;
+long len=strlen(s);
+rem=n%len;
+rept=n/len;
+for(i=0;i<len;i++){
+    if(s[i]=='a')
+        cnt++;
+}
+for(i=0;i<rem;i++)
+{
+    if(s[i]=='a')
+        extra++;
+}
+return (cnt*rept)+extra;
+}

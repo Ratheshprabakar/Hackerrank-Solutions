@@ -1,0 +1,23 @@
+int howManyGames(int p, int d, int m, int s) {
+    int count=0,cost=p;
+    while(cost<=s)
+    {
+        if(p>=m)
+        {
+            p=p-d;
+            if(p>=m)
+            {
+                cost+=p;
+                count++;
+            }
+            else
+            {
+                p=m;
+                cost+=m;
+                count++;
+            }
+        }
+    }
+    return count;
+
+}

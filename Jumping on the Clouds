@@ -1,0 +1,18 @@
+int jumpingOnClouds(int c_count, int* c) {
+    int i=0,jump=0;
+    while(i<c_count-1)
+    {
+        if(c[i+2]==0)
+        {
+            jump++;
+            i=i+2;
+        }
+        else {
+            jump++;
+            i=i+1;
+        }
+    }
+    return jump;
+
+
+}

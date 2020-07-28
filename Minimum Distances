@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,max=0,min=999,first_index=99,second_index=99,diff=0;
+    int n;
+    int flag=0;
+    int a[100000];
+    static int hash[100000];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        if(a[i]>max)
+            max=a[i];
+        hash[a[i]]++;
+    }
+    for(i=0;i<=max;i++)
+    {
+        first_index=99,second_index=99;
+        if(hash[i]==2)
+        {
+            for(j=0;j<n;j++)
+            {
+                if(a[j]==i)
+                {
+                    if(first_index==99)
+                        first_index=j;
+                    else 
+                        second_index=j;
+                    if(first_index!=99 && second_index!=99)
+                    {
+                        diff=second_index-first_index;
+                        if(diff<min)
+                        {
+                            min=diff;
+                        }
+                    }
+                }
+            }
+            flag=1;
+        }
+    }
+    (flag==0)?printf("-1"):printf("%d",min);
+}
